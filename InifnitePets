@@ -1,0 +1,8 @@
+--// CRYSTAL HUB
+local Player = game.Players.LocalPlayer
+local ExclusiveShop = Player.PlayerGui:FindFirstChild("Exclusive Shop")
+local function visible(gui)
+gui.Frame:WaitForChild("Container").InfinitePets.Visible = true
+end
+wait(0.5)
+visible(ExclusiveShop)
