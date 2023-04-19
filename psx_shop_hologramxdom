@@ -1,0 +1,11 @@
+local Player = game.Players.LocalPlayer
+print(Player.Name..", Crystal Hub is loaded.")
+local function VisibleIt()
+Player.PlayerGui.ExclusiveShop.Frame.Container:WaitForChild("PetsDominus").Visible = true
+Player.PlayerGui.ExclusiveShop.Frame.Container:WaitForChild("PetsHologram").Visible = true
+Player.PlayerGui.ExclusiveShop.Enabled = true
+end
+wait(0.5)
+VisibleIt()
+
+--// Crystal Hub
