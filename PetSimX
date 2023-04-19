@@ -1,16 +1,23 @@
-print("💎 MINE UPDATE | LOADING SCRIPT! ")
-wait(0.5)
+--[[
+Mine Update | Bonnie Hub!
+🎁 Thanks for using. --]]
+print("Mine update.")
 local plr = game.Players.LocalPlayer
 local plrGui = plr.PlayerGui
 
 local loading = Instance.new("ScreenGui",plrGui)
+local MainHub = Instance.new("ScreenGui",plrGui)
+local UICornerHub = Instance.new("UICorner")
+local mainframe = Instance.new("Frame",MainHub)
+mainframe.Position = UDim2.new(0,0,-1,0)
 loading.IgnoreGuiInset = true
-loading.DisplayOrder = 9999999999
+loading.DisplayOrder = 756
+MainHub.Name = "BonnieHub"
 local frame = Instance.new("Frame",loading)
 frame.Size = UDim2.new(1,0,1,0)
+MainHub.Enabled = false
 frame.BackgroundColor = BrickColor.new("Really black")
 local text = Instance.new("TextLabel",frame)
-game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
 text.Size= frame.Size
 text.TextScaled = true
 text.TextColor3 = Color3.new(1,1,1)
@@ -27,9 +34,15 @@ wait(2)
 text.Text = "🔥 Script is loading. Wait 5/5"
 wait(0.5)
 text.Text = "🔥 Loaded."
+wait(1)
+text.Text = "💎 Mine Update | Bonnie Hub! Welcome"
 wait(3)
 frame:TweenPosition(UDim2.new(0,0,-1,0))
-
-game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, true)
-plrGui.Loading.Enabled = true
-plrGui.Loading.Frame.Info.Location.Text = "Loading GUI's!"
+wait(2)
+MainHub.Enabled =true
+UICornerHub.Parent = mainframe
+mainframe.Draggable = true
+mainframe.Size = UDim2.new(0, 463,0, 278)
+mainframe:TweenPosition(UDim2.new(0.262, 0,0.27, 0))
+mainframe.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+loading:Destroy()
