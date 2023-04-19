@@ -1,7 +1,3 @@
---[[
-Mine Update | Bonnie Hub!
-🎁 Thanks for using. --]]
-print("Mine update.")
 local plr = game.Players.LocalPlayer
 local plrGui = plr.PlayerGui
 
@@ -9,6 +5,8 @@ local loading = Instance.new("ScreenGui",plrGui)
 local MainHub = Instance.new("ScreenGui",plrGui)
 local UICornerHub = Instance.new("UICorner")
 local mainframe = Instance.new("Frame",MainHub)
+local UIS = game:GetService("UserInputService")
+UIS.MouseEnabled = false
 mainframe.Position = UDim2.new(0,0,-1,0)
 loading.IgnoreGuiInset = true
 loading.DisplayOrder = 756
@@ -39,7 +37,14 @@ text.Text = "💎 Mine Update | Bonnie Hub! Welcome"
 wait(3)
 frame:TweenPosition(UDim2.new(0,0,-1,0))
 wait(2)
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+	Text = "Welcome, "..plr.Name.."! Thanks for using Bonnie Hub! And don't worry, this message visible only for you! :)",
+	Color = Color3.fromRGB(110, 253, 255),
+	Font = Enum.Font.GothamBold
+})
 MainHub.Enabled =true
+UIS.MouseEnabled = true
+mainframe.ZIndex =4
 UICornerHub.Parent = mainframe
 mainframe.Draggable = true
 mainframe.Size = UDim2.new(0, 463,0, 278)
