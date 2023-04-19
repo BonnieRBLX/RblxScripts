@@ -1,0 +1,35 @@
+print("💎 MINE UPDATE | LOADING SCRIPT! ")
+wait(0.5)
+local plr = game.Players.LocalPlayer
+local plrGui = plr.PlayerGui
+
+local loading = Instance.new("ScreenGui",plrGui)
+loading.IgnoreGuiInset = true
+loading.DisplayOrder = 9999999999
+local frame = Instance.new("Frame",loading)
+frame.Size = UDim2.new(1,0,1,0)
+frame.BackgroundColor = BrickColor.new("Really black")
+local text = Instance.new("TextLabel",frame)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
+text.Size= frame.Size
+text.TextScaled = true
+text.TextColor3 = Color3.new(1,1,1)
+text.BackgroundTransparency = 1
+text.Font = Enum.Font.Gotham
+text.Text = "🔥 Script is loading. Wait 1/5"
+wait(2)
+text.Text = "🔥 Script is loading. Wait 2/5"
+wait(1)
+text.Text = "🔥 Script is loading. Wait 3/5"
+wait(2)
+text.Text = "🔥 Script is loading. Wait 4/5"
+wait(2)
+text.Text = "🔥 Script is loading. Wait 5/5"
+wait(0.5)
+text.Text = "🔥 Loaded."
+wait(3)
+frame:TweenPosition(UDim2.new(0,0,-1,0))
+
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, true)
+plrGui.Loading.Enabled = true
+plrGui.Loading.Frame.Info.Location.Text = "Loading GUI's!"
