@@ -23,7 +23,7 @@ game.StarterGui:SetCore("SendNotification", {
 SpeedGUI.Name = "SpeedGUI"
 SpeedGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 SpeedGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
+SpeedGUI.ResetOnSpawn = false
 Frame.Parent = SpeedGUI
 Frame.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
 Frame.Position = UDim2.new(0.328049779, 0, 0.0281456932, 0)
