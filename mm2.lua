@@ -1,9 +1,6 @@
 -- Gui to Lua
 -- Version: 3.2
-game.StarterGui:SetCore("SendNofication", {
-		Title = "Crystal Hub";
-		Text = "Murder Mystery 2"
-		})
+
 -- Instances:
 
 local crystalmm2 = Instance.new("ScreenGui")
