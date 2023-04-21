@@ -1,6 +1,9 @@
 -- Gui to Lua
 -- Version: 3.2
-
+game.StarterGui:SetCore("SendNofication", {
+		Title = "Crystal Hub";
+		Text = "Murder Mystery 2"
+		})
 -- Instances:
 
 local crystalmm2 = Instance.new("ScreenGui")
@@ -14,7 +17,7 @@ local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 local title = Instance.new("TextLabel")
 local idk = Instance.new("Frame")
 local lool = Instance.new("Frame")
-local ScrollingFrame = Instance.new("ScrollingFrame")
+local PlayerFrame = Instance.new("ScrollingFrame")
 local FieldOfView = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
 local _Title_ = Instance.new("TextLabel")
@@ -23,30 +26,47 @@ local UICorner_3 = Instance.new("UICorner")
 local Enter = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 local UIListLayout = Instance.new("UIListLayout")
-local AllWeapons = Instance.new("Frame")
+local FlyGui = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
 local _Title__2 = Instance.new("TextLabel")
 local TextBox_2 = Instance.new("TextBox")
 local UICorner_6 = Instance.new("UICorner")
 local Enter_2 = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
-local ESP = Instance.new("Frame")
+local WalkSpeed = Instance.new("Frame")
 local UICorner_8 = Instance.new("UICorner")
 local _Title__3 = Instance.new("TextLabel")
 local TextBox_3 = Instance.new("TextBox")
 local UICorner_9 = Instance.new("UICorner")
 local Enter_3 = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
-local WalkSpeed = Instance.new("Frame")
+local UIPadding = Instance.new("UIPadding")
+local LocalPlayer = Instance.new("TextButton")
+local UIPadding_2 = Instance.new("UIPadding")
 local UICorner_11 = Instance.new("UICorner")
+local Icon = Instance.new("ImageLabel")
+local Visual = Instance.new("TextButton")
+local UIPadding_3 = Instance.new("UIPadding")
+local UICorner_12 = Instance.new("UICorner")
+local Icon_2 = Instance.new("ImageLabel")
+local VisualFrame = Instance.new("ScrollingFrame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local AllWeapons = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
 local _Title__4 = Instance.new("TextLabel")
 local TextBox_4 = Instance.new("TextBox")
-local UICorner_12 = Instance.new("UICorner")
-local Enter_4 = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
-local UIPadding = Instance.new("UIPadding")
-local Toggle = Instance.new("TextButton")
 local UICorner_14 = Instance.new("UICorner")
+local Enter_4 = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local ESP = Instance.new("Frame")
+local UICorner_16 = Instance.new("UICorner")
+local _Title__5 = Instance.new("TextLabel")
+local TextBox_5 = Instance.new("TextBox")
+local UICorner_17 = Instance.new("UICorner")
+local Enter_5 = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local Toggle = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
 local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
 
 --Properties:
@@ -139,16 +159,17 @@ lool.BackgroundTransparency = 1.000
 lool.Position = UDim2.new(-5.46127019e-08, 0, 0.198847264, 0)
 lool.Size = UDim2.new(1, 0, 0.795389056, 0)
 
-ScrollingFrame.Parent = lool
-ScrollingFrame.Active = true
-ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ScrollingFrame.BackgroundTransparency = 1.000
-ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Size = UDim2.new(1, 0, 1, 0)
-ScrollingFrame.CanvasSize = UDim2.new(0, 0, 4, 0)
+PlayerFrame.Name = "PlayerFrame"
+PlayerFrame.Parent = lool
+PlayerFrame.Active = true
+PlayerFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerFrame.BackgroundTransparency = 1.000
+PlayerFrame.BorderSizePixel = 0
+PlayerFrame.Size = UDim2.new(1, 0, 1, 0)
+PlayerFrame.CanvasSize = UDim2.new(0, 0, 4, 0)
 
 FieldOfView.Name = "FieldOfView"
-FieldOfView.Parent = ScrollingFrame
+FieldOfView.Parent = PlayerFrame
 FieldOfView.BackgroundColor3 = Color3.fromRGB(97, 97, 97)
 FieldOfView.Position = UDim2.new(0, 0, -1.74974411e-05, 0)
 FieldOfView.Size = UDim2.new(0.950056493, 0, 0.0353966206, 0)
@@ -199,32 +220,32 @@ Enter.TextWrapped = true
 UICorner_4.CornerRadius = UDim.new(0.300000012, 0)
 UICorner_4.Parent = Enter
 
-UIListLayout.Parent = ScrollingFrame
+UIListLayout.Parent = PlayerFrame
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIListLayout.Padding = UDim.new(0.00999999978, 0)
 
-AllWeapons.Name = "AllWeapons"
-AllWeapons.Parent = ScrollingFrame
-AllWeapons.BackgroundColor3 = Color3.fromRGB(97, 97, 97)
-AllWeapons.Position = UDim2.new(0, 0, -1.74974411e-05, 0)
-AllWeapons.Size = UDim2.new(0.950056493, 0, 0.0353966206, 0)
+FlyGui.Name = "FlyGui"
+FlyGui.Parent = PlayerFrame
+FlyGui.BackgroundColor3 = Color3.fromRGB(97, 97, 97)
+FlyGui.Position = UDim2.new(0, 0, -1.74974411e-05, 0)
+FlyGui.Size = UDim2.new(0.950056493, 0, 0.0353966206, 0)
 
 UICorner_5.CornerRadius = UDim.new(0.300000012, 0)
-UICorner_5.Parent = AllWeapons
+UICorner_5.Parent = FlyGui
 
 _Title__2.Name = "_Title_"
-_Title__2.Parent = AllWeapons
+_Title__2.Parent = FlyGui
 _Title__2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _Title__2.BackgroundTransparency = 1.000
 _Title__2.Size = UDim2.new(0.516950548, 0, 0.950352728, 0)
 _Title__2.Font = Enum.Font.Garamond
-_Title__2.Text = "All Weapons"
+_Title__2.Text = "Fly Gui"
 _Title__2.TextColor3 = Color3.fromRGB(255, 255, 255)
 _Title__2.TextScaled = true
 _Title__2.TextSize = 14.000
 _Title__2.TextWrapped = true
 
-TextBox_2.Parent = AllWeapons
+TextBox_2.Parent = FlyGui
 TextBox_2.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
 TextBox_2.Position = UDim2.new(0.458541155, 0, 0.0744706988, 0)
 TextBox_2.Size = UDim2.new(0.281032234, 0, 0.851058185, 0)
@@ -242,12 +263,12 @@ UICorner_6.CornerRadius = UDim.new(0.300000012, 0)
 UICorner_6.Parent = TextBox_2
 
 Enter_2.Name = "Enter"
-Enter_2.Parent = AllWeapons
+Enter_2.Parent = FlyGui
 Enter_2.BackgroundColor3 = Color3.fromRGB(121, 121, 121)
 Enter_2.Position = UDim2.new(0.447965622, 0, 0.0744706988, 0)
 Enter_2.Size = UDim2.new(0.537332892, 0, 0.875881851, 0)
 Enter_2.Font = Enum.Font.Garamond
-Enter_2.Text = "Enable (Visual)"
+Enter_2.Text = "Enable"
 Enter_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Enter_2.TextScaled = true
 Enter_2.TextSize = 14.000
@@ -256,35 +277,34 @@ Enter_2.TextWrapped = true
 UICorner_7.CornerRadius = UDim.new(0.300000012, 0)
 UICorner_7.Parent = Enter_2
 
-ESP.Name = "ESP"
-ESP.Parent = ScrollingFrame
-ESP.BackgroundColor3 = Color3.fromRGB(97, 97, 97)
-ESP.Position = UDim2.new(0, 0, -1.74974411e-05, 0)
-ESP.Size = UDim2.new(0.950056493, 0, 0.0353966206, 0)
+WalkSpeed.Name = "WalkSpeed"
+WalkSpeed.Parent = PlayerFrame
+WalkSpeed.BackgroundColor3 = Color3.fromRGB(97, 97, 97)
+WalkSpeed.Position = UDim2.new(0, 0, -1.74974411e-05, 0)
+WalkSpeed.Size = UDim2.new(0.950056493, 0, 0.0353966206, 0)
 
 UICorner_8.CornerRadius = UDim.new(0.300000012, 0)
-UICorner_8.Parent = ESP
+UICorner_8.Parent = WalkSpeed
 
 _Title__3.Name = "_Title_"
-_Title__3.Parent = ESP
+_Title__3.Parent = WalkSpeed
 _Title__3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _Title__3.BackgroundTransparency = 1.000
 _Title__3.Size = UDim2.new(0.516950548, 0, 0.950352728, 0)
 _Title__3.Font = Enum.Font.Garamond
-_Title__3.Text = "Role ESP"
+_Title__3.Text = "Player's Speed:"
 _Title__3.TextColor3 = Color3.fromRGB(255, 255, 255)
 _Title__3.TextScaled = true
 _Title__3.TextSize = 14.000
 _Title__3.TextWrapped = true
 
-TextBox_3.Parent = ESP
+TextBox_3.Parent = WalkSpeed
 TextBox_3.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
 TextBox_3.Position = UDim2.new(0.458541155, 0, 0.0744706988, 0)
 TextBox_3.Size = UDim2.new(0.281032234, 0, 0.851058185, 0)
-TextBox_3.Visible = false
 TextBox_3.Font = Enum.Font.Garamond
 TextBox_3.PlaceholderColor3 = Color3.fromRGB(85, 85, 85)
-TextBox_3.PlaceholderText = "Enter FOV"
+TextBox_3.PlaceholderText = "Enter Speed"
 TextBox_3.Text = ""
 TextBox_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox_3.TextScaled = true
@@ -295,12 +315,12 @@ UICorner_9.CornerRadius = UDim.new(0.300000012, 0)
 UICorner_9.Parent = TextBox_3
 
 Enter_3.Name = "Enter"
-Enter_3.Parent = ESP
+Enter_3.Parent = WalkSpeed
 Enter_3.BackgroundColor3 = Color3.fromRGB(121, 121, 121)
-Enter_3.Position = UDim2.new(0.447965622, 0, 0.0744706988, 0)
-Enter_3.Size = UDim2.new(0.537332892, 0, 0.875881851, 0)
+Enter_3.Position = UDim2.new(0.766578496, 0, 0.0744708925, 0)
+Enter_3.Size = UDim2.new(0.218720034, 0, 0.875881851, 0)
 Enter_3.Font = Enum.Font.Garamond
-Enter_3.Text = "Enable"
+Enter_3.Text = "OK"
 Enter_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 Enter_3.TextScaled = true
 Enter_3.TextSize = 14.000
@@ -309,65 +329,191 @@ Enter_3.TextWrapped = true
 UICorner_10.CornerRadius = UDim.new(0.300000012, 0)
 UICorner_10.Parent = Enter_3
 
-WalkSpeed.Name = "WalkSpeed"
-WalkSpeed.Parent = ScrollingFrame
-WalkSpeed.BackgroundColor3 = Color3.fromRGB(97, 97, 97)
-WalkSpeed.Position = UDim2.new(0, 0, -1.74974411e-05, 0)
-WalkSpeed.Size = UDim2.new(0.950056493, 0, 0.0353966206, 0)
+UIPadding.Parent = lool
+UIPadding.PaddingLeft = UDim.new(0.0299999993, 0)
+UIPadding.PaddingRight = UDim.new(0.0299999993, 0)
 
-UICorner_11.CornerRadius = UDim.new(0.300000012, 0)
-UICorner_11.Parent = WalkSpeed
+LocalPlayer.Name = "LocalPlayer"
+LocalPlayer.Parent = lool
+LocalPlayer.BackgroundColor3 = Color3.fromRGB(102, 102, 102)
+LocalPlayer.Position = UDim2.new(-0.0328750536, 0, 1.04407346, 0)
+LocalPlayer.Size = UDim2.new(0.445556313, 0, 0.140814528, 0)
+LocalPlayer.Font = Enum.Font.Merriweather
+LocalPlayer.Text = "LocalPlayer"
+LocalPlayer.TextColor3 = Color3.fromRGB(255, 255, 255)
+LocalPlayer.TextScaled = true
+LocalPlayer.TextSize = 14.000
+LocalPlayer.TextWrapped = true
+LocalPlayer.TextXAlignment = Enum.TextXAlignment.Right
+
+UIPadding_2.Parent = LocalPlayer
+UIPadding_2.PaddingRight = UDim.new(0.0199999996, 0)
+
+UICorner_11.CornerRadius = UDim.new(0.200000003, 0)
+UICorner_11.Parent = LocalPlayer
+
+Icon.Name = "Icon"
+Icon.Parent = LocalPlayer
+Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon.BackgroundTransparency = 1.000
+Icon.Size = UDim2.new(0.223295555, 0, 1, 0)
+Icon.Image = "rbxassetid://12159210688"
+Icon.ScaleType = Enum.ScaleType.Fit
+Icon.TileSize = UDim2.new(2, 0, 2, 0)
+
+Visual.Name = "Visual"
+Visual.Parent = lool
+Visual.BackgroundColor3 = Color3.fromRGB(102, 102, 102)
+Visual.Position = UDim2.new(0.44161585, 0, 1.04407346, 0)
+Visual.Size = UDim2.new(0.588454187, 0, 0.144439772, 0)
+Visual.Font = Enum.Font.Merriweather
+Visual.Text = "Visual"
+Visual.TextColor3 = Color3.fromRGB(255, 255, 255)
+Visual.TextScaled = true
+Visual.TextSize = 14.000
+Visual.TextWrapped = true
+Visual.TextYAlignment = Enum.TextYAlignment.Top
+
+UIPadding_3.Parent = Visual
+UIPadding_3.PaddingRight = UDim.new(0.0199999996, 0)
+
+UICorner_12.CornerRadius = UDim.new(0.200000003, 0)
+UICorner_12.Parent = Visual
+
+Icon_2.Name = "Icon"
+Icon_2.Parent = Visual
+Icon_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon_2.BackgroundTransparency = 1.000
+Icon_2.Position = UDim2.new(0.00752637489, 0, 0.0257451944, 0)
+Icon_2.Size = UDim2.new(0.32746017, 0, 0.974255025, 0)
+Icon_2.Image = "rbxassetid://12419127949"
+Icon_2.ScaleType = Enum.ScaleType.Crop
+Icon_2.TileSize = UDim2.new(2, 0, 2, 0)
+
+VisualFrame.Name = "VisualFrame"
+VisualFrame.Parent = lool
+VisualFrame.Active = true
+VisualFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VisualFrame.BackgroundTransparency = 1.000
+VisualFrame.BorderSizePixel = 0
+VisualFrame.Size = UDim2.new(1, 0, 1, 0)
+VisualFrame.Visible = false
+VisualFrame.CanvasSize = UDim2.new(0, 0, 4, 0)
+
+UIListLayout_2.Parent = VisualFrame
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0.00999999978, 0)
+
+AllWeapons.Name = "AllWeapons"
+AllWeapons.Parent = VisualFrame
+AllWeapons.BackgroundColor3 = Color3.fromRGB(97, 97, 97)
+AllWeapons.Position = UDim2.new(0, 0, -1.74974411e-05, 0)
+AllWeapons.Size = UDim2.new(0.950056493, 0, 0.0353966206, 0)
+
+UICorner_13.CornerRadius = UDim.new(0.300000012, 0)
+UICorner_13.Parent = AllWeapons
 
 _Title__4.Name = "_Title_"
-_Title__4.Parent = WalkSpeed
+_Title__4.Parent = AllWeapons
 _Title__4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 _Title__4.BackgroundTransparency = 1.000
 _Title__4.Size = UDim2.new(0.516950548, 0, 0.950352728, 0)
 _Title__4.Font = Enum.Font.Garamond
-_Title__4.Text = "Player's Speed:"
+_Title__4.Text = "All Weapons"
 _Title__4.TextColor3 = Color3.fromRGB(255, 255, 255)
 _Title__4.TextScaled = true
 _Title__4.TextSize = 14.000
 _Title__4.TextWrapped = true
 
-TextBox_4.Parent = WalkSpeed
+TextBox_4.Parent = AllWeapons
 TextBox_4.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
 TextBox_4.Position = UDim2.new(0.458541155, 0, 0.0744706988, 0)
 TextBox_4.Size = UDim2.new(0.281032234, 0, 0.851058185, 0)
+TextBox_4.Visible = false
 TextBox_4.Font = Enum.Font.Garamond
 TextBox_4.PlaceholderColor3 = Color3.fromRGB(85, 85, 85)
-TextBox_4.PlaceholderText = "Enter Speed"
+TextBox_4.PlaceholderText = "Enter FOV"
 TextBox_4.Text = ""
 TextBox_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox_4.TextScaled = true
 TextBox_4.TextSize = 14.000
 TextBox_4.TextWrapped = true
 
-UICorner_12.CornerRadius = UDim.new(0.300000012, 0)
-UICorner_12.Parent = TextBox_4
+UICorner_14.CornerRadius = UDim.new(0.300000012, 0)
+UICorner_14.Parent = TextBox_4
 
 Enter_4.Name = "Enter"
-Enter_4.Parent = WalkSpeed
+Enter_4.Parent = AllWeapons
 Enter_4.BackgroundColor3 = Color3.fromRGB(121, 121, 121)
-Enter_4.Position = UDim2.new(0.766578496, 0, 0.0744708925, 0)
-Enter_4.Size = UDim2.new(0.218720034, 0, 0.875881851, 0)
+Enter_4.Position = UDim2.new(0.447965622, 0, 0.0744706988, 0)
+Enter_4.Size = UDim2.new(0.537332892, 0, 0.875881851, 0)
 Enter_4.Font = Enum.Font.Garamond
-Enter_4.Text = "OK"
+Enter_4.Text = "Enable"
 Enter_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 Enter_4.TextScaled = true
 Enter_4.TextSize = 14.000
 Enter_4.TextWrapped = true
 
-UICorner_13.CornerRadius = UDim.new(0.300000012, 0)
-UICorner_13.Parent = Enter_4
+UICorner_15.CornerRadius = UDim.new(0.300000012, 0)
+UICorner_15.Parent = Enter_4
 
-UIPadding.Parent = lool
-UIPadding.PaddingLeft = UDim.new(0.0299999993, 0)
-UIPadding.PaddingRight = UDim.new(0.0299999993, 0)
+ESP.Name = "ESP"
+ESP.Parent = VisualFrame
+ESP.BackgroundColor3 = Color3.fromRGB(97, 97, 97)
+ESP.Position = UDim2.new(0, 0, -1.74974411e-05, 0)
+ESP.Size = UDim2.new(0.950056493, 0, 0.0353966206, 0)
+
+UICorner_16.CornerRadius = UDim.new(0.300000012, 0)
+UICorner_16.Parent = ESP
+
+_Title__5.Name = "_Title_"
+_Title__5.Parent = ESP
+_Title__5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_Title__5.BackgroundTransparency = 1.000
+_Title__5.Size = UDim2.new(0.516950548, 0, 0.950352728, 0)
+_Title__5.Font = Enum.Font.Garamond
+_Title__5.Text = "Role ESP"
+_Title__5.TextColor3 = Color3.fromRGB(255, 255, 255)
+_Title__5.TextScaled = true
+_Title__5.TextSize = 14.000
+_Title__5.TextWrapped = true
+
+TextBox_5.Parent = ESP
+TextBox_5.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+TextBox_5.Position = UDim2.new(0.458541155, 0, 0.0744706988, 0)
+TextBox_5.Size = UDim2.new(0.281032234, 0, 0.851058185, 0)
+TextBox_5.Visible = false
+TextBox_5.Font = Enum.Font.Garamond
+TextBox_5.PlaceholderColor3 = Color3.fromRGB(85, 85, 85)
+TextBox_5.PlaceholderText = "Enter FOV"
+TextBox_5.Text = ""
+TextBox_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_5.TextScaled = true
+TextBox_5.TextSize = 14.000
+TextBox_5.TextWrapped = true
+
+UICorner_17.CornerRadius = UDim.new(0.300000012, 0)
+UICorner_17.Parent = TextBox_5
+
+Enter_5.Name = "Enter"
+Enter_5.Parent = ESP
+Enter_5.BackgroundColor3 = Color3.fromRGB(121, 121, 121)
+Enter_5.Position = UDim2.new(0.447965622, 0, 0.0744706988, 0)
+Enter_5.Size = UDim2.new(0.537332892, 0, 0.875881851, 0)
+Enter_5.Font = Enum.Font.Garamond
+Enter_5.Text = "Enable"
+Enter_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Enter_5.TextScaled = true
+Enter_5.TextSize = 14.000
+Enter_5.TextWrapped = true
+
+UICorner_18.CornerRadius = UDim.new(0.300000012, 0)
+UICorner_18.Parent = Enter_5
 
 Toggle.Name = "Toggle"
 Toggle.Parent = crystalmm2
 Toggle.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+Toggle.Draggable = true
 Toggle.Position = UDim2.new(0.906902075, 0, 0.29801324, 0)
 Toggle.Size = UDim2.new(0.0660112277, 0, 0.107615918, 0)
 Toggle.Font = Enum.Font.Code
@@ -377,15 +523,15 @@ Toggle.TextScaled = true
 Toggle.TextSize = 14.000
 Toggle.TextWrapped = true
 
-UICorner_14.CornerRadius = UDim.new(0.0799999982, 0)
-UICorner_14.Parent = Toggle
+UICorner_19.CornerRadius = UDim.new(0.0799999982, 0)
+UICorner_19.Parent = Toggle
 
 UIAspectRatioConstraint_2.Parent = Toggle
 UIAspectRatioConstraint_2.AspectRatio = 1.012
 
 -- Scripts:
 
-local function GCCKC_fake_script() -- FieldOfView.FieldOfView 
+local function LEWP_fake_script() -- FieldOfView.LocalScript 
 	local script = Instance.new('LocalScript', FieldOfView)
 
 	
@@ -394,19 +540,71 @@ local function GCCKC_fake_script() -- FieldOfView.FieldOfView
 	
 	Button.MouseButton1Click:Connect(function()
 	
-	workspace.CurrentCamera.FieldOfView = TextBox.Text
-			TextBox.Text = ""
+		workspace.CurrentCamera.FieldOfView = TextBox.Text
+		TextBox.Text = ""
 	
 	end)
 end
-coroutine.wrap(GCCKC_fake_script)()
-local function CFOUVR_fake_script() -- AllWeapons.FieldOfView 
-	local script = Instance.new('LocalScript', AllWeapons)
+coroutine.wrap(LEWP_fake_script)()
+local function ZMULQA_fake_script() -- FlyGui.LocalScript 
+	local script = Instance.new('LocalScript', FlyGui)
 
+	local TextBox = script.Parent:WaitForChild("TextBox")
+	local Button = script.Parent:WaitForChild("Enter")
+	local function func(link)
+		
+		loadstring(game:HttpGet(link))()
+	end
 	
+	Button.MouseButton1Click:Connect(function()
+		func("raw.githubusercontent.com/BonnieRBLX/RblxScripts/main/FlyGui.lua")
+	end)
+end
+coroutine.wrap(ZMULQA_fake_script)()
+local function CXSVHHP_fake_script() -- WalkSpeed.LocalScript 
+	local script = Instance.new('LocalScript', WalkSpeed)
+
 	local TextBox = script.Parent:WaitForChild("TextBox")
 	local Button = script.Parent:WaitForChild("Enter")
 	
+	Button.MouseButton1Click:Connect(function()
+	
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = TextBox.Text
+		TextBox.Text = ""
+	
+	end)
+end
+coroutine.wrap(CXSVHHP_fake_script)()
+local function YZWOV_fake_script() -- LocalPlayer.LocalScript 
+	local script = Instance.new('LocalScript', LocalPlayer)
+
+	local FramePlayer=script.Parent.Parent:FindFirstChild("PlayerFrame")
+	local FramePlayer2=script.Parent.Parent:FindFirstChild("VisualFrame")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		FramePlayer2.Visible = false
+		FramePlayer.Visible = true
+	end)
+end
+coroutine.wrap(YZWOV_fake_script)()
+local function JFMB_fake_script() -- Visual.LocalScript 
+	local script = Instance.new('LocalScript', Visual)
+
+	local FramePlayer2=script.Parent.Parent:FindFirstChild("PlayerFrame")
+	local FramePlayer=script.Parent.Parent:FindFirstChild("VisualFrame")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		FramePlayer2.Visible = false
+		FramePlayer.Visible = true
+	end)
+end
+coroutine.wrap(JFMB_fake_script)()
+local function YGBGSK_fake_script() -- AllWeapons.LocalScript 
+	local script = Instance.new('LocalScript', AllWeapons)
+
+	local TextBox = script.Parent:WaitForChild("TextBox")
+	local Button = script.Parent:WaitForChild("Enter")
+	local getrenv = getfenv
 	Button.MouseButton1Click:Connect(function()
 	
 		local WeaponOwnRange = {
@@ -414,7 +612,7 @@ local function CFOUVR_fake_script() -- AllWeapons.FieldOfView
 			max=5
 		}
 	
-		local DataBase, PlayerData = getfenv()._G.Database, getfenv()._G.PlayerData
+		local DataBase, PlayerData = getrenv()._G.Database, getrenv()._G.PlayerData
 	
 		local newOwned = {}
 	
@@ -432,10 +630,12 @@ local function CFOUVR_fake_script() -- AllWeapons.FieldOfView
 	
 	end)
 end
-coroutine.wrap(CFOUVR_fake_script)()
-local function EWNW_fake_script() -- ESP.FieldOfView 
+coroutine.wrap(YGBGSK_fake_script)()
+local function IDPY_fake_script() -- ESP.LocalScript 
 	local script = Instance.new('LocalScript', ESP)
 
+	local TextBox = script.Parent:WaitForChild("TextBox")
+	local Button = script.Parent:WaitForChild("Enter")
 	
 	local TextBox = script.Parent:WaitForChild("TextBox")
 	local Button = script.Parent:WaitForChild("Enter")
@@ -447,61 +647,42 @@ local function EWNW_fake_script() -- ESP.FieldOfView
 		else
 			return Color3.new(0, 255, 0)
 		end
-	end
-	
-	while true do
-		for _, v in pairs(game.Players:GetChildren()) do
-			if v ~= game.Players.LocalPlayer and v.Character and not v.Character:FindFirstChild("Highlight") then
-				Instance.new("Highlight", v.Character)
-				v.Character.Highlight.FillTransparency = 0.5
-				v.Character.Highlight.OutlineTransparency = 0.5
-				v.Character.Highlight.FillColor = getRoleColor(v)
-			elseif (v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Highlight")) then
-				v.Character.Highlight.FillColor = getRoleColor(v)
-			end
 		end
-		wait(0.1)
-	end
-	Button.MouseButton1Click:Connect(function()
-	
 		
-	getRoleColor()
-	end)
-end
-coroutine.wrap(EWNW_fake_script)()
-local function GEEKB_fake_script() -- WalkSpeed.walks 
-	local script = Instance.new('LocalScript', WalkSpeed)
-
-	
-	local TextBox = script.Parent:WaitForChild("TextBox")
-	local Button = script.Parent:WaitForChild("Enter")
 	
 	Button.MouseButton1Click:Connect(function()
 	
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = TextBox.Text
-			TextBox.Text = ""
-	
+	if not game.Players.LocalPlayer.Character:FindFirstChild("Highlight") then
+				for _, v in pairs(game.Players:GetChildren()) do
+					if v ~= game.Players.LocalPlayer and v.Character and not v.Character:FindFirstChild("Highlight") then
+						Instance.new("Highlight", v.Character)
+						v.Character.Highlight.FillTransparency = 0.5
+						v.Character.Highlight.OutlineTransparency = 0.5
+						v.Character.Highlight.FillColor = getRoleColor(v)
+					elseif (v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Highlight")) then
+						v.Character.Highlight.FillColor = getRoleColor(v)
+					end
+				end
+				wait(0.1)
+			
+			script.Parent.Enter.Text = "Disable"
+		else
+			game.Players.LocalPlayer.Character:FindFirstChild("Highlight"):Remove()
+			script.Parent.Enter.Text = "Enable"
+			end
 	end)
 end
-coroutine.wrap(GEEKB_fake_script)()
-local function BEGTHSU_fake_script() -- Toggle.LocalScript 
+coroutine.wrap(IDPY_fake_script)()
+local function XWVR_fake_script() -- Toggle.LocalScript 
 	local script = Instance.new('LocalScript', Toggle)
 
-	script.Parent.Draggable = true
-	script.Parent.Active = true
-	script.Parent.Selectable = true
-	local a = script.Parent.Parent.Frame
-	local b = script.Parent.MouseButton1Click
-	b:Connect(function()
-		if a.Visible == true then
-			a:TweenSize(UDim2.new(0.001, 0,0.041, 0))
-			wait(0.8)
-			a.Visible = false
+	local frame9284_fl29f9bjk = script.Parent.Parent["Frame"]
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame9284_fl29f9bjk.Visible == true then
+			frame9284_fl29f9bjk.Visible = false
 		else
-			a.Visible = true
-			a:TweenSize(UDim2.new(0.561, 0,0.575, 0))
-		
-		end
+			frame9284_fl29f9bjk.Visible = true
+			end
 	end)
 end
-coroutine.wrap(BEGTHSU_fake_script)()
+coroutine.wrap(XWVR_fake_script)()
