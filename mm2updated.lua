@@ -9,6 +9,7 @@
  Murder Mystery 2 | 04/22/2023 | Plugin Used: Gui2Lua (Gui To Lua)
 ]]
 local CrystalHub_murderMystery2 = Instance.new("ScreenGui")
+CrystalHub_murderMystery2.ResetOnSpawn = false
 local KeySystem = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local DropShadowHolder = Instance.new("Frame")
