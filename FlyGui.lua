@@ -3,6 +3,11 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
                 Text = "Modified By SpekzZ";
                 Duration = 3.5;
             })
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "";
+                Text = "Loadstring by hugechefcat#9252";
+                Duration = 3.5;
+            })
 -- Gui to Lua
 -- Version: 3.2
 
