@@ -25,8 +25,8 @@ local mine = Instance.new("TextButton")
 
 --Properties:
 
-main.Name = "main"
-main.Parent = game.CoreGui
+main.Name = "fly"
+main.Parent = game.Players.LocalPlayer.PlayerGui
 main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = main
