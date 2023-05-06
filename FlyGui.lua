@@ -28,7 +28,7 @@ local mine = Instance.new("TextButton")
 main.Name = "fly"
 main.Parent = game.Players.LocalPlayer.PlayerGui
 main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
+main.ResetOnSpawn = false
 Frame.Parent = main
 Frame.BackgroundColor3 = Color3.fromRGB(163, 255, 137)
 Frame.BorderColor3 = Color3.fromRGB(103, 221, 213)
